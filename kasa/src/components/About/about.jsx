@@ -1,6 +1,10 @@
+
+import HeroAbout from "./Hero/hero"
+
 function About () {
   return (
-    <div>
+    <div className="about">
+      <HeroAbout />
       <h1>About</h1>
     </div>
   )
