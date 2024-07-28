@@ -5,7 +5,6 @@ function About () {
   return (
     <div className="about">
       <HeroAbout />
-      <h1>About</h1>
     </div>
   )
 }
