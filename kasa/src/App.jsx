@@ -1,27 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header/header';
-import Footer from './components/Footer/footer';
-import Home from './components/Home/home';
-import About from './components/About/about';
-import Logement from './components/Logement/logement';
-import NotFound from './components/NotFound/notfound';
-import './components/global.sass';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./styles/index.sass";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
     <Router>
       <div id="root">
-        <Header />
         <div className="content">
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/logement/:id" element={<Logement />} />
-            <Route path="*" element={<NotFound />} />
           </Routes>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </Router>
   );
