@@ -1,0 +1,48 @@
+.cards
+    display: flex
+    flex-wrap: wrap
+    padding: 0 20px 210px 20px
+
+.card
+    position: relative
+    text-decoration: none
+    margin-bottom: 20px
+
+.card-img
+    width: 100%
+    display: block
+    border-radius: 20px
+
+.card-title
+    position: absolute
+    bottom: 10px
+    left: 10px
+    color: white
+    background-color: rgba(0, 0, 0, 0.5)
+    padding: 5px
+    border-radius: 3px
+    font-size: 16px
+
+@media screen and (min-width: 768px)
+    .cards
+        display: flex
+        padding: 0 20px 210px 20px
+        justify-content: space-between
+        background-color: #f5f5f5
+        margin: 20px
+        padding: 20px
+        border-radius: 20px
+    .card
+        width: 30%
+        height: auto
+
+    .card-title
+        font-size: 12px
+
+@media screen and (min-width: 1024px)
+    .card-title
+        font-size: 16px
+
+@media screen and (min-width: 1440px)
+    .card-title
+        font-size: 20px
