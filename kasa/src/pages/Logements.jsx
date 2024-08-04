@@ -2,6 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import LogementsData from "../assets/datas/logements.json";
 import Carousel from "../components/Carousel";
 import Tags from "../components/logements/Tags";
+import Rating from "../components/logements/Rating";
 import "../styles/index.sass";
 
 const Logements = () => {
@@ -20,6 +21,7 @@ const Logements = () => {
           <h1 className="logement-title">{logement.title}</h1>
           <p className="logement-location">{logement.location}</p>
           <div className="logement-tags">{tags}</div>
+          <Rating score={logement.rating} />
         </div>
       ) : (
         <Navigate to="/404" />
