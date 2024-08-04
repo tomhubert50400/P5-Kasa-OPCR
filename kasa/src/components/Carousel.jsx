@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // Déclaration du composant Carousel qui prend une prop 'slides'
 const Carousel = ({ slides }) => {
@@ -18,13 +18,6 @@ const Carousel = ({ slides }) => {
     // Si on est à la première image, aller à la dernière image, sinon passer à l'image précédente
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
-
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       nextSlide();
-  //     }, 3000);
-  //     return () => clearInterval(interval);
-  //   }, [current]);
 
   // Vérification : Si 'slides' n'est pas un tableau ou est vide, ne rien afficher (retourner null)
   if (!Array.isArray(slides) || slides.length <= 0) {
