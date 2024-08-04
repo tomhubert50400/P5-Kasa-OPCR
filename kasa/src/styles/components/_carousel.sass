@@ -1,0 +1,38 @@
+.slide
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 20px
+
+.slide-image
+    width: 95vw
+    height: 255px
+    object-fit: cover
+    object-position: center
+    border-radius: 20px
+
+.arrows
+    cursor: pointer
+    font-size: 30px
+    color: #fff
+    z-index: 10
+
+.left-arrow
+    position: absolute
+    left: 40px
+
+.right-arrow
+    position: absolute
+    right: 40px
+
+@media screen and (min-width: 768px)
+    .slide-image
+        height: 300px
+    .arrows
+        font-size: 80px
+
+    .left-arrow
+        left: 80px
+
+    .right-arrow
+        right: 80px
