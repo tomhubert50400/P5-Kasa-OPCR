@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "../styles/index.sass";
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, content, customClass }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
 
@@ -19,7 +19,7 @@ const Collapse = ({ title, content }) => {
   }, [isOpen]);
 
   return (
-    <div className="collapse-container">
+    <div className={`collapse-item-${customClass}`}>
       <div className="collapse-title-container" onClick={display}>
         <h2 className="collapse-title">{title}</h2>
         <div className="collapse-icon">
@@ -34,7 +34,7 @@ const Collapse = ({ title, content }) => {
         className={`collapse-container-content ${isOpen ? "open" : "closed"}`}
         ref={contentRef}
       >
-        <p className="collapse-content">{content}</p>
+        <span className="collapse-content">{content}</span>
       </div>
     </div>
   );

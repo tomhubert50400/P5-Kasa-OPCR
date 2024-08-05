@@ -15,7 +15,11 @@ const About = () => {
           {CollapseData.map((collapse) => {
             return (
               <div key={collapse.id}>
-                <Collapse content={collapse.content} title={collapse.title} />
+                <Collapse
+                  content={collapse.content}
+                  title={collapse.title}
+                  customClass="about"
+                />
               </div>
             );
           })}
