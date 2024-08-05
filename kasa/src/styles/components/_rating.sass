@@ -1,5 +1,16 @@
 .rating
+    display: flex
     margin: 10px
+    margin-top: -45px
 
 .rating-star
-    padding-right: 10px
+    padding-right: 5px
+    width: 15px
+
+@media screen and (min-width: 768px)
+    .rating-star
+        width: 20px
+        padding-right: 10px
+    .rating
+        justify-content: flex-end
+        margin: 20px

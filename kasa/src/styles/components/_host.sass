@@ -1,0 +1,33 @@
+.host
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+
+.host-image
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    margin-right: 20px
+    align-self: center
+
+.host-name
+    align-self: end
+    font-size: 14px
+    padding: 5px
+    color: $primary-color
+
+.host-name span
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+
+@media screen and (min-width: 768px)
+    .host
+        margin-top: -130px
+
+    .host-image
+        width: 75px
+        height: 75px
+
+    .host-name
+        font-size: 18px

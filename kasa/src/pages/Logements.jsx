@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel";
 import Tags from "../components/logements/Tags";
 import Rating from "../components/logements/Rating";
 import "../styles/index.sass";
+import Host from "../components/logements/Host";
 
 const Logements = () => {
   const { id } = useParams();
@@ -21,6 +22,7 @@ const Logements = () => {
           <h1 className="logement-title">{logement.title}</h1>
           <p className="logement-location">{logement.location}</p>
           <div className="logement-tags">{tags}</div>
+          <Host host={logement.host} />
           <Rating score={logement.rating} />
         </div>
       ) : (
