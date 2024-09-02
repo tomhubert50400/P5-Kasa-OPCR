@@ -1,6 +1,6 @@
 import "../styles/index.sass";
 import logo from "../assets/images/logo.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,14 +11,23 @@ const Header = () => {
       <nav className="header-nav">
         <ul className="header-nav-ul">
           <li className="header-nav-li">
-            <Link className="header-nav-link" to="/">
+            <NavLink
+              exact
+              className="header-nav-link"
+              activeClassName="active"
+              to="/"
+            >
               Accueil
-            </Link>
+            </NavLink>
           </li>
           <li className="header-nav-li">
-            <Link className="header-nav-link" to="/about">
+            <NavLink
+              className="header-nav-link"
+              activeClassName="active"
+              to="/about"
+            >
               À propos
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -13,6 +13,7 @@ const Cards = () => {
           key={logement.id}
         >
           <img src={logement.cover} alt={logement.title} className="card-img" />
+          <div className="card-gradient"></div>
           <h2 className="card-title">{logement.title}</h2>
         </Link>
       ))}
