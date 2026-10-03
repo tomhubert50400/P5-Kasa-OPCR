@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "../../styles/index.sass";
 
 const Host = (props) => {
@@ -18,6 +19,13 @@ const Host = (props) => {
       <img src={picture} alt={name} className="host-image" />
     </div>
   );
+};
+
+Host.propTypes = {
+  host: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Host;

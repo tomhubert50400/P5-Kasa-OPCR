@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -47,6 +48,10 @@ const Carousel = ({ slides }) => {
       })}
     </section>
   );
+};
+
+Carousel.propTypes = {
+  slides: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Carousel;

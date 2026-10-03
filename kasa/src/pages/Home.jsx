@@ -1,5 +1,3 @@
-import React from "react";
-
 import Banner from "../components/Banner";
 import homeBanner from "../assets/images/home-banner.png";
 import Cards from "../components/Cards";

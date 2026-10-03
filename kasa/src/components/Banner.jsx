@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Banner = ({ image, texte }) => {
   return (
@@ -7,6 +7,11 @@ const Banner = ({ image, texte }) => {
       <h1 className="banner-text">{texte}</h1>
     </div>
   );
+};
+
+Banner.propTypes = {
+  image: PropTypes.string.isRequired,
+  texte: PropTypes.string.isRequired,
 };
 
 export default Banner;
