@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import PropTypes from "prop-types";
 import "../styles/index.sass";
 
 const Collapse = ({ title, content, customClass }) => {
@@ -38,6 +39,12 @@ const Collapse = ({ title, content, customClass }) => {
       </div>
     </div>
   );
+};
+
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
+  customClass: PropTypes.string.isRequired,
 };
 
 export default Collapse;
